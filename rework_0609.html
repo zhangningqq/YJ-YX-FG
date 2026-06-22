@@ -95,7 +95,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 @media(max-width:768px){.kpi{grid-template-columns:repeat(2,1fr)}.two-col,.three-col{grid-template-columns:1fr}}
 </style></head>
 <body>
-<div class="hd"><h1>&#128202; 隐形返工数据报告</h1><span class="st">06月09日 分析 | 近12天趋势
+<div class="hd"><h1>&#128202; 隐形返工数据报告</h1><span class="st">06月09日 分析 | 近13天趋势
   <select onchange="location.href=this.value" style="background:#fff;color:#1a1a2e;border:1px solid #ddd;border-radius:4px;padding:4px 8px;font-size:12px;margin-left:12px;">
     <option value="rework_0608.html">06月08日</option>
 <option value="rework_0609.html" selected>06月09日</option>
@@ -109,6 +109,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 <option value="rework_0617.html">06月17日</option>
 <option value="rework_0618.html">06月18日</option>
 <option value="rework_0620.html">06月20日</option>
+<option value="rework_0621.html">06月21日</option>
 
   </select>
 </span></div>
@@ -119,7 +120,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
   <div class="kc"><div class="kl">06月09日 返工条数</div><div class="kv" style="color:#0C447C">61<small>条</small> <span class="chg-down">⬇37%</span></div></div>
   <div class="kc"><div class="kl">06月09日 返工件数</div><div class="kv" style="color:#0F6E56">155<small>件</small> <span class="chg-down">⬇9%</span></div></div>
   <div class="kc"><div class="kl">返工/返修</div><div class="kv" style="color:#BA7517;font-size:18px">48<small>条</small> / 13<small>条</small></div></div>
-  <div class="kc"><div class="kl">近12天日均</div><div class="kv" style="color:#534AB7;font-size:18px">61.5<small>条</small> / 182.5<small>件</small></div></div>
+  <div class="kc"><div class="kl">近13天日均</div><div class="kv" style="color:#534AB7;font-size:18px">61.5<small>条</small> / 181.4<small>件</small></div></div>
 </div>
 
 <!-- 提交部门 -->
@@ -181,9 +182,9 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 
 </div>
 <script>document.addEventListener('DOMContentLoaded', function() {
-  var w7 = ["06/13", "06/14", "06/15", "06/16", "06/17", "06/18", "06/20"];
-  var qc7 = [44, 107, 50, 109, 93, 66, 45];
-  var all7 = [113, 173, 176, 181, 241, 183, 174];
+  var w7 = ["06/14", "06/15", "06/16", "06/17", "06/18", "06/20", "06/21"];
+  var qc7 = [107, 50, 109, 93, 66, 45, 77];
+  var all7 = [173, 176, 181, 241, 183, 174, 168];
   var pieSubs = {"抛光问题": ["附件拖拽(19件)", "龈上龈下切割错误(12件)", "未按制作要求加工(9件)", "边缘短、抛坏、划痕、抛污、开裂(8件)", "牙周病未上抛(7件)", "翻边(3件)", "边缘短、抛坏、划痕、抛污、开裂 矫治器附件类：切到附件(3件)", "牙龈线未去除(2件)"], "压迫": ["矫治器压迫牙龈(14件)", "牙龈压迫、回套不贴合(13件)"], "倒凹问题": ["倒凹异常(18件)"], "凸起杂质": ["矫治器凸起杂质(6件)", "光固化缺少(4件)", "光固化凸起杂质(2件)", "矫治器厚度异常(2件)", "光固化缺少、光固化凸起杂质、光固化外观缺损(1件)"], "其他": ["其他(10件)", "矫治器胶状物、表面粉尘(4件)"], "少矫治器": ["矫治器数量多/少(9件)"], "光固化破损": ["光固化外观缺损(2件)"], "设备切坏": ["自动线切割异常(2件)"], "混牙": ["混料(1件)"]};
 
   var c1p = {id:'c1labels',afterDatasetsDraw:function(chart){var ctx=chart.ctx;chart.data.datasets.forEach(function(ds,i){var meta=chart.getDatasetMeta(i);meta.data.forEach(function(bar,idx){var val=ds.data[idx];if(val>0){ctx.fillStyle='#555';ctx.font='bold 11px sans-serif';ctx.textAlign='center';ctx.fillText(val,bar.x,bar.y-6);}});});}};
@@ -195,13 +196,13 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "label": "质检一次通过率(质检端返工)",
         "data": [
-          44,
           107,
           50,
           109,
           93,
           66,
-          45
+          45,
+          77
         ],
         "backgroundColor": "rgba(24,95,165,0.85)",
         "borderRadius": 4,
@@ -211,13 +212,13 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "label": "全流程一次通过率(生产端+质检端)",
         "data": [
-          113,
           173,
           176,
           181,
           241,
           183,
-          174
+          174,
+          168
         ],
         "backgroundColor": "rgba(226,75,74,0.75)",
         "borderRadius": 4,
@@ -341,7 +342,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 });
 
   var c3p = {id:'c3labels',afterDatasetsDraw:function(chart){var ctx=chart.ctx;chart.data.datasets.forEach(function(ds,i){var meta=chart.getDatasetMeta(i);meta.data.forEach(function(bar,idx){var val=ds.data[idx];if(val>0){ctx.fillStyle='#555';ctx.font='bold 12px sans-serif';ctx.textAlign='center';ctx.fillText(val,bar.x,bar.y-6);}});});}};
-  var catData = {"抛光问题":{"data":[25, 44, 34, 55, 49, 27, 17],"color":"#185FA5"},"压迫":{"data":[0, 0, 0, 0, 7, 0, 0],"color":"#0F6E56"},"倒凹问题":{"data":[1, 0, 12, 12, 1, 6, 0],"color":"#E24B4A"},"凸起杂质":{"data":[2, 4, 7, 0, 12, 12, 8],"color":"#BA7517"},"其他":{"data":[19, 28, 11, 50, 72, 54, 45],"color":"#534AB7"},"少矫治器":{"data":[7, 1, 1, 3, 1, 2, 5],"color":"#A32D2D"},"光固化破损":{"data":[8, 5, 1, 0, 2, 1, 5],"color":"#085041"},"设备切坏":{"data":[20, 31, 58, 29, 53, 54, 57],"color":"#3C3489"}};
+  var catData = {"抛光问题":{"data":[44, 34, 55, 49, 27, 17, 18],"color":"#185FA5"},"压迫":{"data":[0, 0, 0, 7, 0, 0, 20],"color":"#0F6E56"},"倒凹问题":{"data":[0, 12, 12, 1, 6, 0, 7],"color":"#E24B4A"},"凸起杂质":{"data":[4, 7, 0, 12, 12, 8, 16],"color":"#BA7517"},"其他":{"data":[28, 11, 50, 72, 54, 45, 31],"color":"#534AB7"},"少矫治器":{"data":[1, 1, 3, 1, 2, 5, 3],"color":"#A32D2D"},"光固化破损":{"data":[5, 1, 0, 2, 1, 5, 5],"color":"#085041"},"设备切坏":{"data":[31, 58, 29, 53, 54, 57, 44],"color":"#3C3489"}};
   var catNames = ["抛光问题", "压迫", "倒凹问题", "凸起杂质", "其他", "少矫治器", "光固化破损", "设备切坏"];
   var catIdx = 0;
   var c3Chart = null;
