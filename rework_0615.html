@@ -48,8 +48,22 @@ body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F5;color:#2C
 table{width:100%;border-collapse:collapse;font-size:12px}
 th{background:#E6F1FB;color:#0C447C;padding:8px 12px;text-align:left;font-size:11px;font-weight:600;white-space:nowrap}
 td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
-.mr{cursor:pointer;transition:background 0.15s}.mr:hover{background:#F8FAFE}
-.dr{display:none}.dr.show{display:table-row}
+.mr_fg{cursor:pointer;transition:background 0.15s}.mr_fg:hover{background:#F8FAFE}
+.dr_fg{display:none}.dr_fg.show{display:table-row}
+.mr2_fg{cursor:pointer;transition:background 0.15s}.mr2_fg:hover{background:#F8FAFE}
+.dr2_fg{display:none}.dr2_fg.show{display:table-row}
+.ar_fg{display:inline-block;transition:transform 0.2s;font-size:10px;margin-right:6px;color:#185FA5}
+.ar_fg.open{transform:rotate(90deg)}
+.ar2_fg{display:inline-block;transition:transform 0.2s;font-size:10px;margin-right:6px;color:#534AB7}
+.ar2_fg.open{transform:rotate(90deg)}
+.mr_fx{cursor:pointer;transition:background 0.15s}.mr_fx:hover{background:#F8FAFE}
+.dr_fx{display:none}.dr_fx.show{display:table-row}
+.mr2_fx{cursor:pointer;transition:background 0.15s}.mr2_fx:hover{background:#F8FAFE}
+.dr2_fx{display:none}.dr2_fx.show{display:table-row}
+.ar_fx{display:inline-block;transition:transform 0.2s;font-size:10px;margin-right:6px;color:#BA7517}
+.ar_fx.open{transform:rotate(90deg)}
+.ar2_fx{display:inline-block;transition:transform 0.2s;font-size:10px;margin-right:6px;color:#534AB7}
+.ar2_fx.open{transform:rotate(90deg)}
 .mr2{cursor:pointer;transition:background 0.15s}.mr2:hover{background:#F8FAFE}
 .dr2{display:none}.dr2.show{display:table-row}
 .st{width:100%;font-size:11px;margin:8px 0}
@@ -95,7 +109,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 @media(max-width:768px){.kpi{grid-template-columns:repeat(2,1fr)}.two-col,.three-col{grid-template-columns:1fr}}
 </style></head>
 <body>
-<div class="hd"><h1>&#128202; 隐形返工数据报告</h1><span class="st">06月15日 分析 | 近15天趋势
+<div class="hd"><h1>&#128202; 隐形返工数据报告</h1><span class="st">06月15日 分析 | 近35天趋势
   <select onchange="location.href=this.value" style="background:#fff;color:#1a1a2e;border:1px solid #ddd;border-radius:4px;padding:4px 8px;font-size:12px;margin-left:12px;">
     <option value="rework_0608.html">06月08日</option>
 <option value="rework_0609.html">06月09日</option>
@@ -112,6 +126,26 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 <option value="rework_0621.html">06月21日</option>
 <option value="rework_0622.html">06月22日</option>
 <option value="rework_0623.html">06月23日</option>
+<option value="rework_0624.html">06月24日</option>
+<option value="rework_0625.html">06月25日</option>
+<option value="rework_0626.html">06月26日</option>
+<option value="rework_0627.html">06月27日</option>
+<option value="rework_0628.html">06月28日</option>
+<option value="rework_0629.html">06月29日</option>
+<option value="rework_0630.html">06月30日</option>
+<option value="rework_0701.html">07月01日</option>
+<option value="rework_0702.html">07月02日</option>
+<option value="rework_0703.html">07月03日</option>
+<option value="rework_0704.html">07月04日</option>
+<option value="rework_0705.html">07月05日</option>
+<option value="rework_0706.html">07月06日</option>
+<option value="rework_0707.html">07月07日</option>
+<option value="rework_0708.html">07月08日</option>
+<option value="rework_0709.html">07月09日</option>
+<option value="rework_0710.html">07月10日</option>
+<option value="rework_0711.html">07月11日</option>
+<option value="rework_0712.html">07月12日</option>
+<option value="rework_0713.html">07月13日</option>
 
   </select>
 </span></div>
@@ -122,7 +156,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
   <div class="kc"><div class="kl">06月15日 返工条数</div><div class="kv" style="color:#0C447C">61<small>条</small> <span class="chg-up">⬆2%</span></div></div>
   <div class="kc"><div class="kl">06月15日 返工件数</div><div class="kv" style="color:#0F6E56">176<small>件</small> <span class="chg-down">⬇2%</span></div></div>
   <div class="kc"><div class="kl">返工/返修</div><div class="kv" style="color:#BA7517;font-size:18px">54<small>条</small> / 7<small>条</small></div></div>
-  <div class="kc"><div class="kl">近15天日均</div><div class="kv" style="color:#534AB7;font-size:18px">61.9<small>条</small> / 182.6<small>件</small></div></div>
+  <div class="kc"><div class="kl">近35天日均</div><div class="kv" style="color:#534AB7;font-size:18px">61.7<small>条</small> / 192.0<small>件</small></div></div>
 </div>
 
 <!-- 提交部门 -->
@@ -130,22 +164,49 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
   <div class="card-title"><span class="icon">&#127970;</span> 06月15日 提交部门统计</div>
   <table>
     <tr><th>提交部门</th><th>条数</th><th>件数</th><th>返工(条/件)</th><th>返修(条/件)</th><th>占比</th></tr>
-    <tr><td><b>生产端</b></td><td>38</td><td><b>125</b></td><td>38条/125件</td><td>0条/0件</td><td>71.0%</td></tr><tr><td><b>成品质检</b></td><td>22</td><td><b>50</b></td><td>15条/25件</td><td>7条/25件</td><td>28.4%</td></tr><tr><td><b>其他</b></td><td>1</td><td><b>1</b></td><td>1条/1件</td><td>0条/0件</td><td>0.6%</td></tr>
+    <tr><td><b>其他</b></td><td>61</td><td><b>176</b></td><td>54条/151件</td><td>7条/25件</td><td>100.0%</td></tr>
   </table>
 </div>
 
-<!-- 构成分析 -->
+<!-- 构成分析（返工/返修分开） -->
 <div class="card">
-  <div class="card-title"><span class="icon">&#129513;</span> 06月15日 返工构成分析</div>
-  <div style="position:relative;height:350px;max-width:600px;margin:0 auto"><canvas id="c2"></canvas></div>
+  <div class="card-title"><span class="icon">&#129513;</span> 06月15日 返工/返修构成分析</div>
+  <div class="two-col">
+    <div>
+      <div class="sec-label" style="background:#185FA5;">返工 54条/151件</div>
+      <div style="position:relative;height:300px;max-width:100%;margin:0 auto"><canvas id="c2_fg"></canvas></div>
+    </div>
+    <div>
+      <div class="sec-label" style="background:#BA7517;">返修 7条/25件</div>
+      <div style="position:relative;height:300px;max-width:100%;margin:0 auto"><canvas id="c2_fx"></canvas></div>
+    </div>
+  </div>
 </div>
 
-<!-- 问题排行明细 -->
+<!-- 总体排行概览 -->
 <div class="card" style="padding:0;overflow:hidden">
-  <div style="padding:16px 20px 8px"><div class="card-title" style="border:none;padding:0;margin:0"><span class="icon">&#128203;</span> 06月15日 返工问题排行（点击展开订单明细）</div></div>
+  <div style="padding:16px 20px 8px"><div class="card-title" style="border:none;padding:0;margin:0"><span class="icon">&#128203;</span> 06月15日 总体问题排行概览</div></div>
   <table>
     <tr><th style="width:30%">问题大类</th><th>条数</th><th>件数</th><th>占比</th><th>警示</th><th>较昨日</th></tr>
-    <tr class="mr" onclick="tog(0)"><td><span class="ar" id="a0">&#9654;</span> 设备切坏</td><td>20</td><td><b>58</b></td><td>32.8%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span> <span class="tag tag-s">🔥激增</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+27件</span></td></tr><tr class="dr" id="d0"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(0,0)"><td><span class="ar2" id="a2_0_0">&#9654;</span> 设备切坏牙面</td><td>5</td><td>24</td></tr><tr class="dr2" id="d2_0_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202605250027701</td><td>7</td><td>返工</td><td>06-15 17:32</td><td>抛光</td></tr><tr><td>自动线切短</td><td>LS01P202305230001614</td><td>12</td><td>返工</td><td>06-15 14:57</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202508020022706</td><td>1</td><td>返工</td><td>06-15 14:19</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202601310028302</td><td>1</td><td>返工</td><td>06-15 13:27</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202406020029821</td><td>3</td><td>返工</td><td>06-15 11:54</td><td>抛光</td></tr></table></td></tr><tr class="mr2" onclick="tog2(0,1)"><td><span class="ar2" id="a2_0_1">&#9654;</span> 设备切坏附件</td><td>5</td><td>22</td></tr><tr class="dr2" id="d2_0_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202511290020203</td><td>4</td><td>返工</td><td>06-15 20:15</td><td>抛光</td></tr><tr><td>抛到附件</td><td>LS01P202408240025212</td><td>1</td><td>返工</td><td>06-15 19:46</td><td>修整</td></tr><tr><td>-</td><td>LS01P202603160030303</td><td>1</td><td>返工</td><td>06-15 16:26</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202606070031901</td><td>11</td><td>返工</td><td>06-15 13:42</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202408240025212</td><td>5</td><td>返工</td><td>06-15 10:35</td><td>抛光</td></tr></table></td></tr><tr class="mr2" onclick="tog2(0,2)"><td><span class="ar2" id="a2_0_2">&#9654;</span> 凸起杂质</td><td>10</td><td>12</td></tr><tr class="dr2" id="d2_0_2"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202402190024110</td><td>2</td><td>返工</td><td>06-15 19:10</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202510110022203</td><td>1</td><td>返工</td><td>06-15 18:03</td><td>修整</td></tr><tr><td>-</td><td>LS01P202507290025409</td><td>1</td><td>返工</td><td>06-15 17:26</td><td>成品检验</td></tr><tr><td>光固化杂质</td><td>LS01P202602180020403</td><td>1</td><td>返工</td><td>06-15 15:55</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202601310028302</td><td>1</td><td>返工</td><td>06-15 14:07</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202503050025810</td><td>1</td><td>返工</td><td>06-15 13:09</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202306050001517</td><td>1</td><td>返工</td><td>06-15 12:45</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202401220021014</td><td>2</td><td>返工</td><td>06-15 12:39</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202408200030408</td><td>1</td><td>返工</td><td>06-15 11:41</td><td>修整</td></tr><tr><td>13牙面凸起杂质</td><td>LS01P202511170023005</td><td>1</td><td>返工</td><td>06-15 10:04</td><td>成品检验</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(1)"><td><span class="ar" id="a1">&#9654;</span> 抛光问题</td><td>15</td><td><b>34</b></td><td>24.6%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td><td><span style="color:#0F6E56;font-weight:600">⬇-10件</span></td></tr><tr class="dr" id="d1"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(1,0)"><td><span class="ar2" id="a2_1_0">&#9654;</span> 边缘短</td><td>4</td><td>8</td></tr><tr class="dr2" id="d2_1_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>舌侧边缘短</td><td>LS01P202505060027307</td><td>4</td><td>返工</td><td>06-15 19:28</td><td>成品检验</td></tr><tr><td>舌侧边缘短</td><td>LS01P202306160002508</td><td>2</td><td>返工</td><td>06-15 18:26</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202507060027716</td><td>1</td><td>返工</td><td>06-15 11:52</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202404080024918</td><td>1</td><td>返工</td><td>06-15 10:37</td><td>抛光</td></tr></table></td></tr><tr class="mr2" onclick="tog2(1,1)"><td><span class="ar2" id="a2_1_1">&#9654;</span> 未按制作要求加工</td><td>2</td><td>7</td></tr><tr class="dr2" id="d2_1_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>舌侧25，26牙位切割线太直</td><td>LS01P202603040021202</td><td>1</td><td>返修</td><td>06-15 17:03</td><td>成品检验</td></tr><tr><td>36,46牙位远中不包裹，保留颌面完整</td><td>LS01P202602180020103</td><td>6</td><td>返修</td><td>06-15 14:51</td><td>成品检验</td></tr></table></td></tr><tr class="mr2" onclick="tog2(1,2)"><td><span class="ar2" id="a2_1_2">&#9654;</span> 末端牙切割错误</td><td>1</td><td>6</td></tr><tr class="dr2" id="d2_1_2"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202508290025808</td><td>6</td><td>返工</td><td>06-15 10:33</td><td>抛光</td></tr></table></td></tr><tr class="mr2" onclick="tog2(1,3)"><td><span class="ar2" id="a2_1_3">&#9654;</span> 边缘开裂</td><td>4</td><td>5</td></tr><tr class="dr2" id="d2_1_3"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202603160030303</td><td>1</td><td>返工</td><td>06-15 18:52</td><td>抛光</td></tr><tr><td>2区开窗处附件开裂</td><td>LS01P202508110022908</td><td>1</td><td>返工</td><td>06-15 15:59</td><td>成品检验</td></tr><tr><td>46牙位附件开裂</td><td>LS01P202412160030908</td><td>2</td><td>返工</td><td>06-15 10:48</td><td>成品检验</td></tr><tr><td>23附件开裂</td><td>LS01P202508110022908</td><td>1</td><td>返工</td><td>06-15 09:55</td><td>成品检验</td></tr></table></td></tr><tr class="mr2" onclick="tog2(1,4)"><td><span class="ar2" id="a2_1_4">&#9654;</span> 翻边</td><td>1</td><td>5</td></tr><tr class="dr2" id="d2_1_4"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>2区翻边</td><td>LS01P202507210036607</td><td>5</td><td>返修</td><td>06-15 14:22</td><td>成品检验</td></tr></table></td></tr><tr class="mr2" onclick="tog2(1,5)"><td><span class="ar2" id="a2_1_5">&#9654;</span> 抛污</td><td>3</td><td>3</td></tr><tr class="dr2" id="d2_1_5"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202409050021710</td><td>1</td><td>返工</td><td>06-15 13:59</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202501150027214</td><td>1</td><td>返工</td><td>06-15 13:33</td><td>修整</td></tr><tr><td>-</td><td>LS01P202507200031908</td><td>1</td><td>返工</td><td>06-15 10:54</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(2)"><td><span class="ar" id="a2">&#9654;</span> 附件拖拽</td><td>7</td><td><b>24</b></td><td>11.5%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+1件</span></td></tr><tr class="dr" id="d2"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(2,0)"><td><span class="ar2" id="a2_2_0">&#9654;</span> 附件托拽</td><td>7</td><td>24</td></tr><tr class="dr2" id="d2_2_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>26舌侧附件拖拽</td><td>LS01P202510030026406</td><td>4</td><td>返工</td><td>06-15 19:55</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202512110022104</td><td>1</td><td>返工</td><td>06-15 15:06</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202310310021303</td><td>3</td><td>返工</td><td>06-15 11:35</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202603080020106</td><td>9</td><td>返工</td><td>06-15 11:31</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202406040022511</td><td>1</td><td>返工</td><td>06-15 11:15</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202603040022704</td><td>1</td><td>返工</td><td>06-15 10:16</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202603040027102</td><td>5</td><td>返工</td><td>06-15 09:35</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(3)"><td><span class="ar" id="a3">&#9654;</span> 附件问题</td><td>5</td><td><b>13</b></td><td>8.2%</td><td><span class="tag tag-r">🔴高发</span></td><td><span style="color:#0F6E56;font-weight:600">⬇-2件</span></td></tr><tr class="dr" id="d3"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(3,0)"><td><span class="ar2" id="a2_3_0">&#9654;</span> 悦见扣漏沾</td><td>1</td><td>6</td></tr><tr class="dr2" id="d2_3_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202308190021910</td><td>6</td><td>返修</td><td>06-15 11:22</td><td>成品检验</td></tr></table></td></tr><tr class="mr2" onclick="tog2(3,1)"><td><span class="ar2" id="a2_3_1">&#9654;</span> 牵引钩漏开</td><td>2</td><td>5</td></tr><tr class="dr2" id="d2_3_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>23牵引钩</td><td>LS01P202412160030908</td><td>1</td><td>返修</td><td>06-15 20:21</td><td>成品检验</td></tr><tr><td>13,12,23,33牵引钩</td><td>LS01P202412160030908</td><td>4</td><td>返修</td><td>06-15 10:45</td><td>成品检验</td></tr></table></td></tr><tr class="mr2" onclick="tog2(3,2)"><td><span class="ar2" id="a2_3_2">&#9654;</span> 牵引钩附件问题</td><td>2</td><td>2</td></tr><tr class="dr2" id="d2_3_2"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>牵引钩变形</td><td>LS01P202406280032316</td><td>1</td><td>返工</td><td>06-15 16:49</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202306160002508</td><td>1</td><td>返工</td><td>06-15 09:24</td><td>修整</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(4)"><td><span class="ar" id="a4">&#9654;</span> 倒凹问题</td><td>2</td><td><b>12</b></td><td>3.3%</td><td><span class="tag tag-g">⚠️新增</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+12件</span></td></tr><tr class="dr" id="d4"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(4,0)"><td><span class="ar2" id="a2_4_0">&#9654;</span> 倒凹少</td><td>2</td><td>12</td></tr><tr class="dr2" id="d2_4_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>HB褶皱 需填倒凹 压膜压两幅</td><td>LS01P202502060022312</td><td>6</td><td>返工</td><td>06-15 11:09</td><td>抛光</td></tr><tr><td>HB褶皱 压膜压两遍 做两幅</td><td>LS01P202510080027215</td><td>6</td><td>返工</td><td>06-15 09:30</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(5)"><td><span class="ar" id="a5">&#9654;</span> 其他</td><td>3</td><td><b>11</b></td><td>4.9%</td><td></td><td><span style="color:#0F6E56;font-weight:600">⬇-17件</span></td></tr><tr class="dr" id="d5"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(5,0)"><td><span class="ar2" id="a2_5_0">&#9654;</span> 其他</td><td>2</td><td>9</td></tr><tr class="dr2" id="d2_5_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>数字标不清晰</td><td>LS01P202606070031301</td><td>3</td><td>返工</td><td>06-15 17:27</td><td>抛光</td></tr><tr><td>下颌3-3舌侧未添加加强筋</td><td>LS01P202409100021714</td><td>6</td><td>返工</td><td>06-15 11:19</td><td>抛光</td></tr></table></td></tr><tr class="mr2" onclick="tog2(5,1)"><td><span class="ar2" id="a2_5_1">&#9654;</span> 矫治器胶状物、表面粉尘</td><td>1</td><td>2</td></tr><tr class="dr2" id="d2_5_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>矫治器内胶状物</td><td>LS01P202402190024110</td><td>2</td><td>返修</td><td>06-15 14:29</td><td>成品检验</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(6)"><td><span class="ar" id="a6">&#9654;</span> 压制问题</td><td>4</td><td><b>10</b></td><td>6.6%</td><td></td><td><span style="color:#E24B4A;font-weight:600">⬆+3件</span></td></tr><tr class="dr" id="d6"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(6,0)"><td><span class="ar2" id="a2_6_0">&#9654;</span> 矫治器褶皱</td><td>3</td><td>9</td></tr><tr class="dr2" id="d2_6_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202511090029307</td><td>1</td><td>返工</td><td>06-15 15:17</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202507170028407</td><td>6</td><td>返工</td><td>06-15 10:16</td><td>修整</td></tr><tr><td>变形</td><td>LS01P202606010023101</td><td>2</td><td>返工</td><td>06-15 09:38</td><td>抛光</td></tr></table></td></tr><tr class="mr2" onclick="tog2(6,1)"><td><span class="ar2" id="a2_6_1">&#9654;</span> 压制不清晰</td><td>1</td><td>1</td></tr><tr class="dr2" id="d2_6_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202505250026507</td><td>1</td><td>返工</td><td>06-15 15:47</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(7)"><td><span class="ar" id="a7">&#9654;</span> 凸起杂质</td><td>2</td><td><b>7</b></td><td>3.3%</td><td><span class="tag tag-s">🔥激增</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+3件</span></td></tr><tr class="dr" id="d7"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(7,0)"><td><span class="ar2" id="a2_7_0">&#9654;</span> 光固化凸起杂质</td><td>2</td><td>7</td></tr><tr class="dr2" id="d2_7_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202508230031005</td><td>1</td><td>返工</td><td>06-15 19:14</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202501130031809</td><td>6</td><td>返工</td><td>06-15 15:46</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(8)"><td><span class="ar" id="a8">&#9654;</span> 牙薄</td><td>1</td><td><b>5</b></td><td>1.6%</td><td></td><td><span style="color:#0F6E56;font-weight:600">⬇-1件</span></td></tr><tr class="dr" id="d8"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(8,0)"><td><span class="ar2" id="a2_8_0">&#9654;</span> 矫治器薄</td><td>1</td><td>5</td></tr><tr class="dr2" id="d2_8_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202508210033703</td><td>5</td><td>返工</td><td>06-15 17:00</td><td>修整</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(9)"><td><span class="ar" id="a9">&#9654;</span> 光固化破损</td><td>1</td><td><b>1</b></td><td>1.6%</td><td></td><td><span style="color:#0F6E56;font-weight:600">⬇-4件</span></td></tr><tr class="dr" id="d9"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(9,0)"><td><span class="ar2" id="a2_9_0">&#9654;</span> 光固化外观缺损</td><td>1</td><td>1</td></tr><tr class="dr2" id="d2_9_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202309080024222</td><td>1</td><td>返工</td><td>06-15 17:01</td><td>模后处理</td></tr></table></td></tr></table></div></td></tr><tr class="mr" onclick="tog(10)"><td><span class="ar" id="a10">&#9654;</span> 少矫治器</td><td>1</td><td><b>1</b></td><td>1.6%</td><td></td><td><span style="color:#888">→持平</span></td></tr><tr class="dr" id="d10"><td colspan="6"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2" onclick="tog2(10,0)"><td><span class="ar2" id="a2_10_0">&#9654;</span> 矫治器数量不符</td><td>1</td><td>1</td></tr><tr class="dr2" id="d2_10_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>类型</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202505060027307</td><td>1</td><td>返工</td><td>06-15 16:42</td><td>清洗烘干</td></tr></table></td></tr></table></div></td></tr>
+    <tr><td>设备切坏</td><td>20</td><td><b>58</b></td><td>32.8%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span> <span class="tag tag-s">🔥激增</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+27件</span></td></tr><tr><td>抛光问题</td><td>15</td><td><b>34</b></td><td>24.6%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td><td><span style="color:#0F6E56;font-weight:600">⬇-10件</span></td></tr><tr><td>附件拖拽</td><td>7</td><td><b>24</b></td><td>11.5%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+1件</span></td></tr><tr><td>附件问题</td><td>5</td><td><b>13</b></td><td>8.2%</td><td><span class="tag tag-r">🔴高发</span></td><td><span style="color:#0F6E56;font-weight:600">⬇-2件</span></td></tr><tr><td>倒凹问题</td><td>2</td><td><b>12</b></td><td>3.3%</td><td><span class="tag tag-g">⚠️新增</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+12件</span></td></tr><tr><td>其他</td><td>3</td><td><b>11</b></td><td>4.9%</td><td></td><td><span style="color:#0F6E56;font-weight:600">⬇-17件</span></td></tr><tr><td>压制问题</td><td>4</td><td><b>10</b></td><td>6.6%</td><td></td><td><span style="color:#E24B4A;font-weight:600">⬆+3件</span></td></tr><tr><td>凸起杂质</td><td>2</td><td><b>7</b></td><td>3.3%</td><td><span class="tag tag-s">🔥激增</span></td><td><span style="color:#E24B4A;font-weight:600">⬆+3件</span></td></tr><tr><td>牙薄</td><td>1</td><td><b>5</b></td><td>1.6%</td><td></td><td><span style="color:#0F6E56;font-weight:600">⬇-1件</span></td></tr><tr><td>光固化破损</td><td>1</td><td><b>1</b></td><td>1.6%</td><td></td><td><span style="color:#0F6E56;font-weight:600">⬇-4件</span></td></tr><tr><td>少矫治器</td><td>1</td><td><b>1</b></td><td>1.6%</td><td></td><td><span style="color:#888">→持平</span></td></tr>
+  </table>
+</div>
+
+<!-- 返工问题排行明细 -->
+<div class="card" style="padding:0;overflow:hidden">
+  <div style="padding:16px 20px 8px"><div class="card-title" style="border:none;padding:0;margin:0"><span class="icon">&#128203;</span> 06月15日 返工问题排行（点击展开明细）</div></div>
+  <table>
+    <tr><th style="width:30%">问题大类</th><th>条数</th><th>件数</th><th>占比</th><th>警示</th></tr>
+    <tr class="mr_fg" onclick="tog_fg(0)"><td><span class="ar_fg" id="a_fg_0">&#9654;</span> 设备切坏</td><td>20</td><td><b>58</b></td><td>37.0%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td></tr><tr class="dr_fg" id="d_fg_0"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(0,0)"><td><span class="ar2_fg" id="a2_fg_0_0">&#9654;</span> 设备切坏牙面</td><td>5</td><td>24</td></tr><tr class="dr2_fg" id="d2_fg_0_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202605250027701</td><td>7</td><td>06-15 17:32</td><td>抛光</td></tr><tr><td>自动线切短</td><td>LS01P202305230001614</td><td>12</td><td>06-15 14:57</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202508020022706</td><td>1</td><td>06-15 14:19</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202601310028302</td><td>1</td><td>06-15 13:27</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202406020029821</td><td>3</td><td>06-15 11:54</td><td>抛光</td></tr></table></td></tr><tr class="mr2_fg" onclick="tog2_fg(0,1)"><td><span class="ar2_fg" id="a2_fg_0_1">&#9654;</span> 设备切坏附件</td><td>5</td><td>22</td></tr><tr class="dr2_fg" id="d2_fg_0_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202511290020203</td><td>4</td><td>06-15 20:15</td><td>抛光</td></tr><tr><td>抛到附件</td><td>LS01P202408240025212</td><td>1</td><td>06-15 19:46</td><td>修整</td></tr><tr><td>-</td><td>LS01P202603160030303</td><td>1</td><td>06-15 16:26</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202606070031901</td><td>11</td><td>06-15 13:42</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202408240025212</td><td>5</td><td>06-15 10:35</td><td>抛光</td></tr></table></td></tr><tr class="mr2_fg" onclick="tog2_fg(0,2)"><td><span class="ar2_fg" id="a2_fg_0_2">&#9654;</span> 凸起杂质</td><td>10</td><td>12</td></tr><tr class="dr2_fg" id="d2_fg_0_2"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202402190024110</td><td>2</td><td>06-15 19:10</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202510110022203</td><td>1</td><td>06-15 18:03</td><td>修整</td></tr><tr><td>-</td><td>LS01P202507290025409</td><td>1</td><td>06-15 17:26</td><td>成品检验</td></tr><tr><td>光固化杂质</td><td>LS01P202602180020403</td><td>1</td><td>06-15 15:55</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202601310028302</td><td>1</td><td>06-15 14:07</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202503050025810</td><td>1</td><td>06-15 13:09</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202306050001517</td><td>1</td><td>06-15 12:45</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202401220021014</td><td>2</td><td>06-15 12:39</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202408200030408</td><td>1</td><td>06-15 11:41</td><td>修整</td></tr><tr><td>13牙面凸起杂质</td><td>LS01P202511170023005</td><td>1</td><td>06-15 10:04</td><td>成品检验</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(1)"><td><span class="ar_fg" id="a_fg_1">&#9654;</span> 附件拖拽</td><td>7</td><td><b>24</b></td><td>13.0%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td></tr><tr class="dr_fg" id="d_fg_1"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(1,0)"><td><span class="ar2_fg" id="a2_fg_1_0">&#9654;</span> 附件托拽</td><td>7</td><td>24</td></tr><tr class="dr2_fg" id="d2_fg_1_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>26舌侧附件拖拽</td><td>LS01P202510030026406</td><td>4</td><td>06-15 19:55</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202512110022104</td><td>1</td><td>06-15 15:06</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202310310021303</td><td>3</td><td>06-15 11:35</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202603080020106</td><td>9</td><td>06-15 11:31</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202406040022511</td><td>1</td><td>06-15 11:15</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202603040022704</td><td>1</td><td>06-15 10:16</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202603040027102</td><td>5</td><td>06-15 09:35</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(2)"><td><span class="ar_fg" id="a_fg_2">&#9654;</span> 抛光问题</td><td>12</td><td><b>22</b></td><td>22.2%</td><td><span class="tag tag-r">🔴高发</span> <span class="tag tag-a">🟡量大</span></td></tr><tr class="dr_fg" id="d_fg_2"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(2,0)"><td><span class="ar2_fg" id="a2_fg_2_0">&#9654;</span> 边缘短</td><td>4</td><td>8</td></tr><tr class="dr2_fg" id="d2_fg_2_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>舌侧边缘短</td><td>LS01P202505060027307</td><td>4</td><td>06-15 19:28</td><td>成品检验</td></tr><tr><td>舌侧边缘短</td><td>LS01P202306160002508</td><td>2</td><td>06-15 18:26</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202507060027716</td><td>1</td><td>06-15 11:52</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202404080024918</td><td>1</td><td>06-15 10:37</td><td>抛光</td></tr></table></td></tr><tr class="mr2_fg" onclick="tog2_fg(2,1)"><td><span class="ar2_fg" id="a2_fg_2_1">&#9654;</span> 末端牙切割错误</td><td>1</td><td>6</td></tr><tr class="dr2_fg" id="d2_fg_2_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202508290025808</td><td>6</td><td>06-15 10:33</td><td>抛光</td></tr></table></td></tr><tr class="mr2_fg" onclick="tog2_fg(2,2)"><td><span class="ar2_fg" id="a2_fg_2_2">&#9654;</span> 边缘开裂</td><td>4</td><td>5</td></tr><tr class="dr2_fg" id="d2_fg_2_2"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202603160030303</td><td>1</td><td>06-15 18:52</td><td>抛光</td></tr><tr><td>2区开窗处附件开裂</td><td>LS01P202508110022908</td><td>1</td><td>06-15 15:59</td><td>成品检验</td></tr><tr><td>46牙位附件开裂</td><td>LS01P202412160030908</td><td>2</td><td>06-15 10:48</td><td>成品检验</td></tr><tr><td>23附件开裂</td><td>LS01P202508110022908</td><td>1</td><td>06-15 09:55</td><td>成品检验</td></tr></table></td></tr><tr class="mr2_fg" onclick="tog2_fg(2,3)"><td><span class="ar2_fg" id="a2_fg_2_3">&#9654;</span> 抛污</td><td>3</td><td>3</td></tr><tr class="dr2_fg" id="d2_fg_2_3"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202409050021710</td><td>1</td><td>06-15 13:59</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202501150027214</td><td>1</td><td>06-15 13:33</td><td>修整</td></tr><tr><td>-</td><td>LS01P202507200031908</td><td>1</td><td>06-15 10:54</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(3)"><td><span class="ar_fg" id="a_fg_3">&#9654;</span> 倒凹问题</td><td>2</td><td><b>12</b></td><td>3.7%</td><td></td></tr><tr class="dr_fg" id="d_fg_3"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(3,0)"><td><span class="ar2_fg" id="a2_fg_3_0">&#9654;</span> 倒凹少</td><td>2</td><td>12</td></tr><tr class="dr2_fg" id="d2_fg_3_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>HB褶皱 需填倒凹 压膜压两幅</td><td>LS01P202502060022312</td><td>6</td><td>06-15 11:09</td><td>抛光</td></tr><tr><td>HB褶皱 压膜压两遍 做两幅</td><td>LS01P202510080027215</td><td>6</td><td>06-15 09:30</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(4)"><td><span class="ar_fg" id="a_fg_4">&#9654;</span> 压制问题</td><td>4</td><td><b>10</b></td><td>7.4%</td><td></td></tr><tr class="dr_fg" id="d_fg_4"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(4,0)"><td><span class="ar2_fg" id="a2_fg_4_0">&#9654;</span> 矫治器褶皱</td><td>3</td><td>9</td></tr><tr class="dr2_fg" id="d2_fg_4_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202511090029307</td><td>1</td><td>06-15 15:17</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202507170028407</td><td>6</td><td>06-15 10:16</td><td>修整</td></tr><tr><td>变形</td><td>LS01P202606010023101</td><td>2</td><td>06-15 09:38</td><td>抛光</td></tr></table></td></tr><tr class="mr2_fg" onclick="tog2_fg(4,1)"><td><span class="ar2_fg" id="a2_fg_4_1">&#9654;</span> 压制不清晰</td><td>1</td><td>1</td></tr><tr class="dr2_fg" id="d2_fg_4_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202505250026507</td><td>1</td><td>06-15 15:47</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(5)"><td><span class="ar_fg" id="a_fg_5">&#9654;</span> 其他</td><td>2</td><td><b>9</b></td><td>3.7%</td><td></td></tr><tr class="dr_fg" id="d_fg_5"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(5,0)"><td><span class="ar2_fg" id="a2_fg_5_0">&#9654;</span> 其他</td><td>2</td><td>9</td></tr><tr class="dr2_fg" id="d2_fg_5_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>数字标不清晰</td><td>LS01P202606070031301</td><td>3</td><td>06-15 17:27</td><td>抛光</td></tr><tr><td>下颌3-3舌侧未添加加强筋</td><td>LS01P202409100021714</td><td>6</td><td>06-15 11:19</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(6)"><td><span class="ar_fg" id="a_fg_6">&#9654;</span> 凸起杂质</td><td>2</td><td><b>7</b></td><td>3.7%</td><td></td></tr><tr class="dr_fg" id="d_fg_6"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(6,0)"><td><span class="ar2_fg" id="a2_fg_6_0">&#9654;</span> 光固化凸起杂质</td><td>2</td><td>7</td></tr><tr class="dr2_fg" id="d2_fg_6_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202508230031005</td><td>1</td><td>06-15 19:14</td><td>抛光</td></tr><tr><td>-</td><td>LS01P202501130031809</td><td>6</td><td>06-15 15:46</td><td>抛光</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(7)"><td><span class="ar_fg" id="a_fg_7">&#9654;</span> 牙薄</td><td>1</td><td><b>5</b></td><td>1.9%</td><td></td></tr><tr class="dr_fg" id="d_fg_7"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(7,0)"><td><span class="ar2_fg" id="a2_fg_7_0">&#9654;</span> 矫治器薄</td><td>1</td><td>5</td></tr><tr class="dr2_fg" id="d2_fg_7_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202508210033703</td><td>5</td><td>06-15 17:00</td><td>修整</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(8)"><td><span class="ar_fg" id="a_fg_8">&#9654;</span> 附件问题</td><td>2</td><td><b>2</b></td><td>3.7%</td><td></td></tr><tr class="dr_fg" id="d_fg_8"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(8,0)"><td><span class="ar2_fg" id="a2_fg_8_0">&#9654;</span> 牵引钩附件问题</td><td>2</td><td>2</td></tr><tr class="dr2_fg" id="d2_fg_8_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>牵引钩变形</td><td>LS01P202406280032316</td><td>1</td><td>06-15 16:49</td><td>成品检验</td></tr><tr><td>-</td><td>LS01P202306160002508</td><td>1</td><td>06-15 09:24</td><td>修整</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(9)"><td><span class="ar_fg" id="a_fg_9">&#9654;</span> 光固化破损</td><td>1</td><td><b>1</b></td><td>1.9%</td><td></td></tr><tr class="dr_fg" id="d_fg_9"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(9,0)"><td><span class="ar2_fg" id="a2_fg_9_0">&#9654;</span> 光固化外观缺损</td><td>1</td><td>1</td></tr><tr class="dr2_fg" id="d2_fg_9_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202309080024222</td><td>1</td><td>06-15 17:01</td><td>模后处理</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fg" onclick="tog_fg(10)"><td><span class="ar_fg" id="a_fg_10">&#9654;</span> 少矫治器</td><td>1</td><td><b>1</b></td><td>1.9%</td><td></td></tr><tr class="dr_fg" id="d_fg_10"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fg" onclick="tog2_fg(10,0)"><td><span class="ar2_fg" id="a2_fg_10_0">&#9654;</span> 矫治器数量不符</td><td>1</td><td>1</td></tr><tr class="dr2_fg" id="d2_fg_10_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202505060027307</td><td>1</td><td>06-15 16:42</td><td>清洗烘干</td></tr></table></td></tr></table></div></td></tr>
+  </table>
+</div>
+
+<!-- 返修问题排行明细 -->
+<div class="card" style="padding:0;overflow:hidden">
+  <div style="padding:16px 20px 8px"><div class="card-title" style="border:none;padding:0;margin:0"><span class="icon">&#128203;</span> 06月15日 返修问题排行（点击展开明细）</div></div>
+  <table>
+    <tr><th style="width:30%">问题大类</th><th>条数</th><th>件数</th><th>占比</th><th>警示</th></tr>
+    <tr class="mr_fx" onclick="tog_fx(0)"><td><span class="ar_fx" id="a_fx_0">&#9654;</span> 抛光问题</td><td>3</td><td><b>12</b></td><td>42.9%</td><td><span class="tag tag-r">🔴高发</span></td></tr><tr class="dr_fx" id="d_fx_0"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fx" onclick="tog2_fx(0,0)"><td><span class="ar2_fx" id="a2_fx_0_0">&#9654;</span> 未按制作要求加工</td><td>2</td><td>7</td></tr><tr class="dr2_fx" id="d2_fx_0_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>舌侧25，26牙位切割线太直</td><td>LS01P202603040021202</td><td>1</td><td>06-15 17:03</td><td>成品检验</td></tr><tr><td>36,46牙位远中不包裹，保留颌面完整</td><td>LS01P202602180020103</td><td>6</td><td>06-15 14:51</td><td>成品检验</td></tr></table></td></tr><tr class="mr2_fx" onclick="tog2_fx(0,1)"><td><span class="ar2_fx" id="a2_fx_0_1">&#9654;</span> 翻边</td><td>1</td><td>5</td></tr><tr class="dr2_fx" id="d2_fx_0_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>2区翻边</td><td>LS01P202507210036607</td><td>5</td><td>06-15 14:22</td><td>成品检验</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fx" onclick="tog_fx(1)"><td><span class="ar_fx" id="a_fx_1">&#9654;</span> 附件问题</td><td>3</td><td><b>11</b></td><td>42.9%</td><td><span class="tag tag-r">🔴高发</span></td></tr><tr class="dr_fx" id="d_fx_1"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fx" onclick="tog2_fx(1,0)"><td><span class="ar2_fx" id="a2_fx_1_0">&#9654;</span> 悦见扣漏沾</td><td>1</td><td>6</td></tr><tr class="dr2_fx" id="d2_fx_1_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>-</td><td>LS01P202308190021910</td><td>6</td><td>06-15 11:22</td><td>成品检验</td></tr></table></td></tr><tr class="mr2_fx" onclick="tog2_fx(1,1)"><td><span class="ar2_fx" id="a2_fx_1_1">&#9654;</span> 牵引钩漏开</td><td>2</td><td>5</td></tr><tr class="dr2_fx" id="d2_fx_1_1"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>23牵引钩</td><td>LS01P202412160030908</td><td>1</td><td>06-15 20:21</td><td>成品检验</td></tr><tr><td>13,12,23,33牵引钩</td><td>LS01P202412160030908</td><td>4</td><td>06-15 10:45</td><td>成品检验</td></tr></table></td></tr></table></div></td></tr><tr class="mr_fx" onclick="tog_fx(2)"><td><span class="ar_fx" id="a_fx_2">&#9654;</span> 其他</td><td>1</td><td><b>2</b></td><td>14.3%</td><td><span class="tag tag-r">🔴高发</span></td></tr><tr class="dr_fx" id="d_fx_2"><td colspan="5"><div class="sub-wrap"><table class="st"><tr><th>明细</th><th>条数</th><th>件数</th></tr><tr class="mr2_fx" onclick="tog2_fx(2,0)"><td><span class="ar2_fx" id="a2_fx_2_0">&#9654;</span> 矫治器胶状物、表面粉尘</td><td>1</td><td>2</td></tr><tr class="dr2_fx" id="d2_fx_2_0"><td colspan="3"><table class="dt"><tr><th>返工备注</th><th>订单号</th><th>件数</th><th>时间</th><th>提交工序</th></tr><tr><td>矫治器内胶状物</td><td>LS01P202402190024110</td><td>2</td><td>06-15 14:29</td><td>成品检验</td></tr></table></td></tr></table></div></td></tr>
   </table>
 </div>
 
@@ -184,10 +245,11 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 
 </div>
 <script>document.addEventListener('DOMContentLoaded', function() {
-  var w7 = ["06/16", "06/17", "06/18", "06/20", "06/21", "06/22", "06/23"];
-  var qc7 = [109, 93, 66, 45, 77, 90, 119];
-  var all7 = [181, 241, 183, 174, 168, 196, 185];
-  var pieSubs = {"设备切坏": ["设备切坏牙面(24件)", "设备切坏附件(22件)", "凸起杂质(12件)"], "抛光问题": ["边缘短(8件)", "未按制作要求加工(7件)", "末端牙切割错误(6件)", "边缘开裂(5件)", "翻边(5件)", "抛污(3件)"], "附件拖拽": ["附件托拽(24件)"], "附件问题": ["悦见扣漏沾(6件)", "牵引钩漏开(5件)", "牵引钩附件问题(2件)"], "倒凹问题": ["倒凹少(12件)"], "其他": ["其他(9件)", "矫治器胶状物、表面粉尘(2件)"], "压制问题": ["矫治器褶皱(9件)", "压制不清晰(1件)"], "凸起杂质": ["光固化凸起杂质(7件)"], "牙薄": ["矫治器薄(5件)"], "光固化破损": ["光固化外观缺损(1件)"], "少矫治器": ["矫治器数量不符(1件)"]};
+  var w7 = ["07/07", "07/08", "07/09", "07/10", "07/11", "07/12", "07/13"];
+  var qc7 = [0, 0, 0, 0, 0, 0, 0];
+  var all7 = [258, 162, 204, 170, 220, 173, 260];
+  var pieSubsFG = {"设备切坏": ["设备切坏牙面(24件)", "设备切坏附件(22件)", "凸起杂质(12件)"], "附件拖拽": ["附件托拽(24件)"], "抛光问题": ["边缘短(8件)", "末端牙切割错误(6件)", "边缘开裂(5件)", "抛污(3件)"], "倒凹问题": ["倒凹少(12件)"], "压制问题": ["矫治器褶皱(9件)", "压制不清晰(1件)"], "其他": ["其他(9件)"], "凸起杂质": ["光固化凸起杂质(7件)"], "牙薄": ["矫治器薄(5件)"], "附件问题": ["牵引钩附件问题(2件)"], "光固化破损": ["光固化外观缺损(1件)"], "少矫治器": ["矫治器数量不符(1件)"]};
+  var pieSubsFX = {"抛光问题": ["未按制作要求加工(7件)", "翻边(5件)"], "附件问题": ["悦见扣漏沾(6件)", "牵引钩漏开(5件)"], "其他": ["矫治器胶状物、表面粉尘(2件)"]};
 
   var c1p = {id:'c1labels',afterDatasetsDraw:function(chart){var ctx=chart.ctx;chart.data.datasets.forEach(function(ds,i){var meta=chart.getDatasetMeta(i);meta.data.forEach(function(bar,idx){var val=ds.data[idx];if(val>0){ctx.fillStyle='#555';ctx.font='bold 11px sans-serif';ctx.textAlign='center';ctx.fillText(val,bar.x,bar.y-6);}});});}};
   new Chart(document.getElementById('c1'), {
@@ -198,13 +260,13 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "label": "质检一次通过率(质检端返工)",
         "data": [
-          109,
-          93,
-          66,
-          45,
-          77,
-          90,
-          119
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ],
         "backgroundColor": "rgba(24,95,165,0.85)",
         "borderRadius": 4,
@@ -214,13 +276,13 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "label": "全流程一次通过率(生产端+质检端)",
         "data": [
-          181,
-          241,
-          183,
-          174,
-          168,
-          196,
-          185
+          258,
+          162,
+          204,
+          170,
+          220,
+          173,
+          260
         ],
         "backgroundColor": "rgba(226,75,74,0.75)",
         "borderRadius": 4,
@@ -280,19 +342,19 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
   "plugins": [c1p]
 });
 
-  new Chart(document.getElementById('c2'), {
+  new Chart(document.getElementById('c2_fg'), {
   "type": "doughnut",
   "data": {
     "labels": [
       "设备切坏",
-      "抛光问题",
       "附件拖拽",
-      "附件问题",
+      "抛光问题",
       "倒凹问题",
-      "其他",
       "压制问题",
+      "其他",
       "凸起杂质",
       "牙薄",
+      "附件问题",
       "光固化破损",
       "少矫治器"
     ],
@@ -300,14 +362,14 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "data": [
           58,
-          34,
           24,
-          13,
+          22,
           12,
-          11,
           10,
+          9,
           7,
           5,
+          2,
           1,
           1
         ],
@@ -342,7 +404,51 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       },
       "tooltip": {
         "callbacks": {
-          "label": function(ctx){var t=ctx.dataset.data.reduce(function(a,b){return a+b},0);var lines=[ctx.label+': '+ctx.parsed+'件 ('+((ctx.parsed/t)*100).toFixed(1)+'%)'];var subs=pieSubs[ctx.label];if(subs&&subs.length>0){for(var i=0;i<subs.length;i++){lines.push('  '+subs[i]);}}return lines;}
+          "label": function(ctx){var t=ctx.dataset.data.reduce(function(a,b){return a+b},0);var lines=[ctx.label+': '+ctx.parsed+'件 ('+((ctx.parsed/t)*100).toFixed(1)+'%)'];var subs=pieSubsFG[ctx.label];if(subs&&subs.length>0){for(var i=0;i<subs.length;i++){lines.push('  '+subs[i]);}}return lines;}
+        }
+      }
+    }
+  }
+});
+  new Chart(document.getElementById('c2_fx'), {
+  "type": "doughnut",
+  "data": {
+    "labels": [
+      "抛光问题",
+      "附件问题",
+      "其他"
+    ],
+    "datasets": [
+      {
+        "data": [
+          12,
+          11,
+          2
+        ],
+        "backgroundColor": [
+          "#185FA5",
+          "#0F6E56",
+          "#E24B4A"
+        ]
+      }
+    ]
+  },
+  "options": {
+    "responsive": true,
+    "plugins": {
+      "legend": {
+        "position": "right",
+        "labels": {
+          "font": {
+            "size": 10
+          },
+          "boxWidth": 12,
+          "padding": 8
+        }
+      },
+      "tooltip": {
+        "callbacks": {
+          "label": function(ctx){var t=ctx.dataset.data.reduce(function(a,b){return a+b},0);var lines=[ctx.label+': '+ctx.parsed+'件 ('+((ctx.parsed/t)*100).toFixed(1)+'%)'];var subs=pieSubsFX[ctx.label];if(subs&&subs.length>0){for(var i=0;i<subs.length;i++){lines.push('  '+subs[i]);}}return lines;}
         }
       }
     }
@@ -350,7 +456,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 });
 
   var c3p = {id:'c3labels',afterDatasetsDraw:function(chart){var ctx=chart.ctx;chart.data.datasets.forEach(function(ds,i){var meta=chart.getDatasetMeta(i);meta.data.forEach(function(bar,idx){var val=ds.data[idx];if(val>0){ctx.fillStyle='#555';ctx.font='bold 12px sans-serif';ctx.textAlign='center';ctx.fillText(val,bar.x,bar.y-6);}});});}};
-  var catData = {"设备切坏":{"data":[29, 53, 54, 57, 44, 41, 34],"color":"#185FA5"},"抛光问题":{"data":[55, 49, 27, 17, 18, 50, 75],"color":"#0F6E56"},"附件拖拽":{"data":[23, 9, 1, 17, 3, 4, 8],"color":"#E24B4A"},"附件问题":{"data":[2, 12, 0, 0, 6, 14, 5],"color":"#BA7517"},"倒凹问题":{"data":[12, 1, 6, 0, 7, 13, 0],"color":"#534AB7"},"其他":{"data":[50, 72, 54, 45, 31, 26, 32],"color":"#A32D2D"},"压制问题":{"data":[3, 3, 6, 1, 3, 20, 6],"color":"#085041"},"凸起杂质":{"data":[0, 12, 12, 8, 16, 3, 3],"color":"#3C3489"}};
+  var catData = {"设备切坏":{"data":[43, 24, 26, 52, 65, 56, 41],"color":"#185FA5"},"抛光问题":{"data":[53, 33, 37, 53, 38, 63, 73],"color":"#0F6E56"},"附件拖拽":{"data":[22, 11, 2, 10, 4, 4, 5],"color":"#E24B4A"},"附件问题":{"data":[15, 12, 19, 7, 34, 11, 44],"color":"#BA7517"},"倒凹问题":{"data":[0, 6, 0, 0, 0, 0, 0],"color":"#534AB7"},"其他":{"data":[64, 17, 91, 23, 43, 5, 76],"color":"#A32D2D"},"压制问题":{"data":[20, 6, 18, 2, 7, 0, 8],"color":"#085041"},"凸起杂质":{"data":[15, 3, 5, 6, 4, 8, 0],"color":"#3C3489"}};
   var catNames = ["设备切坏", "抛光问题", "附件拖拽", "附件问题", "倒凹问题", "其他", "压制问题", "凸起杂质"];
   var catIdx = 0;
   var c3Chart = null;
@@ -412,6 +518,34 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       document.querySelectorAll('#ad'+i+' .ar2.open').forEach(function(x){ x.classList.remove('open'); });
       r.classList.add('show'); a.classList.add('open');
     }
+  };
+  window.tog_fg = function(i){
+    var r = document.getElementById('d_fg_'+i);
+    var a = document.getElementById('a_fg_'+i);
+    if(!r) return;
+    if(r.classList.contains('show')){ r.classList.remove('show'); a.classList.remove('open'); }
+    else { r.classList.add('show'); a.classList.add('open'); }
+  };
+  window.tog2_fg = function(i,j){
+    var r = document.getElementById('d2_fg_'+i+'_'+j);
+    var a = document.getElementById('a2_fg_'+i+'_'+j);
+    if(!r) return;
+    if(r.classList.contains('show')){ r.classList.remove('show'); a.classList.remove('open'); }
+    else { r.classList.add('show'); a.classList.add('open'); }
+  };
+  window.tog_fx = function(i){
+    var r = document.getElementById('d_fx_'+i);
+    var a = document.getElementById('a_fx_'+i);
+    if(!r) return;
+    if(r.classList.contains('show')){ r.classList.remove('show'); a.classList.remove('open'); }
+    else { r.classList.add('show'); a.classList.add('open'); }
+  };
+  window.tog2_fx = function(i,j){
+    var r = document.getElementById('d2_fx_'+i+'_'+j);
+    var a = document.getElementById('a2_fx_'+i+'_'+j);
+    if(!r) return;
+    if(r.classList.contains('show')){ r.classList.remove('show'); a.classList.remove('open'); }
+    else { r.classList.add('show'); a.classList.add('open'); }
   };
 });
 </script></body></html>
