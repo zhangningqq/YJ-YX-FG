@@ -109,7 +109,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 @media(max-width:768px){.kpi{grid-template-columns:repeat(2,1fr)}.two-col,.three-col{grid-template-columns:1fr}}
 </style></head>
 <body>
-<div class="hd"><h1>&#128202; 隐形返工数据报告</h1><span class="st">07月06日 分析 | 近35天趋势
+<div class="hd"><h1>&#128202; 隐形返工数据报告</h1><span class="st">07月06日 分析 | 近36天趋势
   <select onchange="location.href=this.value" style="background:#fff;color:#1a1a2e;border:1px solid #ddd;border-radius:4px;padding:4px 8px;font-size:12px;margin-left:12px;">
     <option value="rework_0608.html">06月08日</option>
 <option value="rework_0609.html">06月09日</option>
@@ -146,6 +146,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 <option value="rework_0711.html">07月11日</option>
 <option value="rework_0712.html">07月12日</option>
 <option value="rework_0713.html">07月13日</option>
+<option value="rework_0714.html">07月14日</option>
 
   </select>
 </span></div>
@@ -156,7 +157,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
   <div class="kc"><div class="kl">07月06日 返工条数</div><div class="kv" style="color:#0C447C">70<small>条</small> <span class="chg-up">⬆32%</span></div></div>
   <div class="kc"><div class="kl">07月06日 返工件数</div><div class="kv" style="color:#0F6E56">171<small>件</small> <span class="chg-up">⬆17%</span></div></div>
   <div class="kc"><div class="kl">返工 / 返修</div><div class="kv" style="color:#BA7517;font-size:16px;line-height:1.4">返工 54<small>条</small>/121<small>件</small><br>返修 16<small>条</small>/50<small>件</small></div></div>
-  <div class="kc"><div class="kl">近35天日均</div><div class="kv" style="color:#534AB7;font-size:18px">61.7<small>条</small> / 192.0<small>件</small></div></div>
+  <div class="kc"><div class="kl">近36天日均</div><div class="kv" style="color:#534AB7;font-size:18px">62.4<small>条</small> / 194.3<small>件</small></div></div>
 </div>
 
 <!-- 提交部门 -->
@@ -164,7 +165,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
   <div class="card-title"><span class="icon">&#127970;</span> 07月06日 提交部门统计</div>
   <table>
     <tr><th>提交部门</th><th>条数</th><th>件数</th><th>返工(条/件)</th><th>返修(条/件)</th><th>占比</th></tr>
-    <tr><td><b>其他</b></td><td>70</td><td><b>171</b></td><td>54条/121件</td><td>16条/50件</td><td>100.0%</td></tr>
+    <tr><td><b>成品质检</b></td><td>44</td><td><b>106</b></td><td>28条/56件</td><td>16条/50件</td><td>62.0%</td></tr><tr><td><b>生产</b></td><td>26</td><td><b>65</b></td><td>26条/65件</td><td>0条/0件</td><td>38.0%</td></tr>
   </table>
 </div>
 
@@ -236,9 +237,9 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 
 </div>
 <script>document.addEventListener('DOMContentLoaded', function() {
-  var w7 = ["07/07", "07/08", "07/09", "07/10", "07/11", "07/12", "07/13"];
-  var qc7 = [0, 0, 0, 0, 0, 0, 0];
-  var all7 = [258, 162, 204, 170, 220, 173, 260];
+  var w7 = ["07/08", "07/09", "07/10", "07/11", "07/12", "07/13", "07/14"];
+  var qc7 = [97, 110, 94, 78, 125, 116, 135];
+  var all7 = [162, 204, 170, 220, 173, 260, 273];
   var pieSubsFG = {"抛光问题": ["边缘短(17件)", "末端牙切割错误(9件)", "边缘短、设备切坏牙面(7件)", "边缘短 矫治器外观类问题：凸起杂质(6件)", "边缘开裂(4件)", "抛污(1件)"], "设备切坏": ["设备切坏牙面(16件)", "凸起杂质(8件)", "设备切坏附件(8件)"], "压制问题": ["压制不清晰(13件)"], "其他": ["其他(13件)"], "凸起杂质": ["光固化凸起杂质(5件)"], "附件拖拽": ["附件托拽(5件)"], "牙薄": ["矫治器薄(3件)"], "光固化破损": ["光固化外观缺损(2件)"], "附件模版问题": ["附件模板数量不符(2件)"], "少矫治器": ["矫治器数量不符(1件)"], "附件问题": ["牵引钩附件问题(1件)"]};
   var pieSubsFX = {"抛光问题": ["未按制作要求加工(18件)", "边缘不光滑、翻边(8件)", "边缘不光滑(4件)", "翻边 矫治器切割要求类：牙龈线未去除(3件)", "抛污(1件)"], "其他": ["其他(12件)", "缺少原始模型(3件)"], "附件问题": ["牵引钩漏开(1件)"]};
 
@@ -251,13 +252,13 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "label": "质检一次通过率(质检端返工)",
         "data": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
+          97,
+          110,
+          94,
+          78,
+          125,
+          116,
+          135
         ],
         "backgroundColor": "rgba(24,95,165,0.85)",
         "borderRadius": 4,
@@ -267,13 +268,13 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
       {
         "label": "全流程一次通过率(生产端+质检端)",
         "data": [
-          258,
           162,
           204,
           170,
           220,
           173,
-          260
+          260,
+          273
         ],
         "backgroundColor": "rgba(226,75,74,0.75)",
         "borderRadius": 4,
@@ -447,7 +448,7 @@ td{padding:8px 12px;border-bottom:1px solid #F0F2F5}
 });
 
   var c3p = {id:'c3labels',afterDatasetsDraw:function(chart){var ctx=chart.ctx;chart.data.datasets.forEach(function(ds,i){var meta=chart.getDatasetMeta(i);meta.data.forEach(function(bar,idx){var val=ds.data[idx];if(val>0){ctx.fillStyle='#555';ctx.font='bold 12px sans-serif';ctx.textAlign='center';ctx.fillText(val,bar.x,bar.y-6);}});});}};
-  var catData = {"抛光问题":{"data":[53, 33, 37, 53, 38, 63, 73],"color":"#185FA5"},"设备切坏":{"data":[43, 24, 26, 52, 65, 56, 41],"color":"#0F6E56"},"其他":{"data":[64, 17, 91, 23, 43, 5, 76],"color":"#E24B4A"},"压制问题":{"data":[20, 6, 18, 2, 7, 0, 8],"color":"#BA7517"},"凸起杂质":{"data":[15, 3, 5, 6, 4, 8, 0],"color":"#534AB7"},"附件拖拽":{"data":[22, 11, 2, 10, 4, 4, 5],"color":"#A32D2D"},"牙薄":{"data":[19, 17, 0, 0, 6, 6, 7],"color":"#085041"},"附件问题":{"data":[15, 12, 19, 7, 34, 11, 44],"color":"#3C3489"}};
+  var catData = {"抛光问题":{"data":[33, 37, 53, 38, 63, 73, 43],"color":"#185FA5"},"设备切坏":{"data":[24, 26, 52, 65, 52, 41, 93],"color":"#0F6E56"},"其他":{"data":[17, 91, 23, 43, 5, 76, 71],"color":"#E24B4A"},"压制问题":{"data":[6, 18, 2, 7, 0, 8, 0],"color":"#BA7517"},"凸起杂质":{"data":[3, 5, 6, 4, 12, 0, 17],"color":"#534AB7"},"附件拖拽":{"data":[11, 2, 10, 4, 4, 5, 5],"color":"#A32D2D"},"牙薄":{"data":[17, 0, 0, 6, 6, 7, 6],"color":"#085041"},"附件问题":{"data":[12, 19, 7, 34, 11, 44, 11],"color":"#3C3489"}};
   var catNames = ["抛光问题", "设备切坏", "其他", "压制问题", "凸起杂质", "附件拖拽", "牙薄", "附件问题"];
   var catIdx = 0;
   var c3Chart = null;
